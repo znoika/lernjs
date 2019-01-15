@@ -1,39 +1,22 @@
 
 
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
-var myImage = document.querySelector('img');
 
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+var a = 1;
+var b = 2;
+var c = 2;
+var result = false;
+
+document.getElementById("a").innerHTML = "Katet a=" + a;
+document.getElementById("b").innerHTML = "Katet b=" + b;
+document.getElementById("c").innerHTML = "Katet c=" + c;
+document.getElementById("d").innerHTML = isTriangle(a,b,c);
+
+
+function isTriangle(a,b,c)
+{
+    document.getElementById("p").innerHTML = "P= " + ( a*a )/ c;
+    document.getElementById("q").innerHTML = "Q= " + ( b*b )/ c;
+    document.getElementById("h").innerHTML = "Die Höhe: " + Math.sqrt( (( a*a )/ c) * (( a*a )/ c) );
+    
+    return false;
 }
-
-myImage.onclick = function() {
-    var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/firefox-icon.png') {
-      myImage.setAttribute ('src','images/gimp_tool.png');
-    } else {
-      myImage.setAttribute ('src','images/firefox-icon.png');
-    }
-}
-
-
-myButton.onclick = function() {
-  setUserName();
-}
-
-
-function multiply(num1, num2) {
-   // debugger;
-    var result = num1 * num2;
-    return result;
-}
-
-function setUserName() {
-    var myName = prompt('Please enter your name.');
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
-  }
