@@ -15,18 +15,20 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $( "#para" ).animate({
+        $( "p" ).animate({
           width       : "70%",
           opacity     : 0.4,
           marginLeft  : "0.6in",
           fontSize    : "3em",
           borderWidth : "10px"
-        }, 1500 );
+        }, 1500 ).fadeOut(1000).fadeIn(1000);
       });
     </script>
   </head>
   <body>
     <p id="para">Olga erledige Brief für Fahrschule!!!</p>
+    <p>first para</p>
+    <p>second para</p>
     <!-- <script src="script/main.js"></script>-->
   </body>
 </html>
