@@ -2,20 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
-
+    <title>Animation</title>
+    <style>
+      p {
+        background-color : light-gray;
+        Width            : 100px;
+        border           : 1px solid black;
+      }
+    </style>
+    <script type="text/javascript"
+            src="script/jquery-3.3.1.js">
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $( "#para" ).animate({
+          width       : "70%",
+          opacity     : 0.4,
+          marginLeft  : "0.6in",
+          fontSize    : "3em",
+          borderWidth : "10px"
+        }, 1500 );
+      });
+    </script>
   </head>
   <body>
-
-    <ul> <!-- changed to list in the tutorial -->
-        <h1 id="a"></h1>
-        <h1 id="b"></h1>
-        <h1 id="c"></h1>
-        <h1 id="d"></h1>
-        <h1 id="p"></h1>
-        <h1 id="q"></h1>
-        <h1 id="h">123</h1>
-    </ul>
-    <script src="script/main.js"></script>
+    <p id="para">Olga erledige Brief für Fahrschule!!!</p>
+    <!-- <script src="script/main.js"></script>-->
   </body>
 </html>
